@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'crispy_forms',
 ]
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 # Uncomment the following line to include crispy forms
 
 # CRISPY_TEMPLATE_PACK = 'bootstrap4'

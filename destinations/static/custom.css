@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #444;
+  }
+
+  .bg {
+    background-color: #DFB887;
+
+  }
+  .navbar{
+    height: 35px;
+    width: 100%;
+    opacity: .9;
+    margin-bottom: 10px;
+  }

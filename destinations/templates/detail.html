@@ -1,17 +1,36 @@
 {% extends "base.html" %} 
+{% load crispy_forms_tags %}
 
 {% block title %}Detail{% endblock title %} 
 
 {% block content %}
+{{ form|crispy }}
+<div class="card mb-3">
+    <img class="card-img-top" src="{{destination.pretty_picture.url}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{destination.name}}</h5>
+      <p class="card-text">{{destination.description}}</p>
+      <p class="card-text"><small class="text-muted">
+          </p>
+    </div>
+  </div>
+  
+  {% endblock content %}
+
+
+
+      {% comment %}
     <p>{{destination.name}}</p>
     <p>{{destination.description}}</p>
     <p>{{destination.activities}}</p>
     <p><img src="{{destination.pretty_picture.url}}"></p>
     <p>{{destination.optimal_visiting_season}}</p>
-    <a href="{% url 'destination-update' destination.id %}">
+    <a href="{% url 'destination-detail' destination.id %}">
         <button>Update</button>
     </a>
     <a href="{% url 'destination-delete' destination.id %}">
         <button>Delete</button>
     </a>
-{% endblock content %}
+
+
+{% endcomment %}
